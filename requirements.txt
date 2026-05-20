@@ -1,0 +1,16 @@
+fastapi 
+uvicorn
+streamlit 
+pandas
+langchain-anthropic
+anthropic
+requests
+numpy 
+scikit-learn
+python-dotenv
+
+
+# Higging face Integration
+langchain-huggingface
+transformers
+huggingface-hub
