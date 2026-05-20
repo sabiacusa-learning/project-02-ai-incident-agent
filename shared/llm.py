@@ -1,15 +1,21 @@
-
+from huggingface_hub import InferenceClient
 import os
-from anthropic import Anthropic
 
-client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+HF_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
+MODEL = os.getenv("HF_MODEL", "mistralai/Mistral-7B-Instruct-v0.2")
 
-def ask_claude(messages):
+client = InferenceClient(
+    token=HF_TOKEN,
+    model=MODEL,
+)
 
-    res = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1500,
-        messages=messages
+def ask_llm(prompt: str) -> str:
+
+    response = client.text_generation(
+        prompt,
+        max_new_tokens=800,
+        temperature=0.3,
+        top_p=0.9
     )
 
-    #return res.content[0].text
+    return response
