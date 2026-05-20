@@ -25,18 +25,37 @@ System Design
 * Data Layer: CSV (POC), extensible to Postgres + pgvector
 * Architecture Style: Microservice-inspired modular backend
 
-1. Install dependencies
+## 🚀 Setup Instructions
 
+### **1. Install dependencies**
+```bash
 python -m venv venv
 venv\Scripts\activate
 pip install fastapi uvicorn streamlit pandas requests anthropic python-dotenv
+```
 
-2. Start services
+### **2. Start services**
 Terminal 1 — Agent Service
+```bash
 uvicorn services.agent_service:app --port 8001 --reload
+```
 Terminal 2 — API Gateway
+```bash
 uvicorn gateway.main:app --port 8000 --reload
+```
 Terminal 3 — UI
+```bash
 streamlit run ui/streamlit_app.py
+```
+
+
+
+
+
+
+
+
+
+
 
 
