@@ -1,0 +1,2 @@
+timestamp,service,level,message,trace_id
+2026-05-01T10:00:00,checkout,ERROR,DB connection timeout,abc123
