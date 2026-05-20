@@ -47,6 +47,20 @@ Terminal 3 — UI
 ```bash
 streamlit run ui/streamlit_app.py
 ```
+📈 Future Improvements
+* Replace CSV → PostgreSQL + pgvector
+* Add Redis caching layer
+* Introduce Kafka/RabbitMQ event streaming
+* Add streaming token responses
+* Add authentication layer (JWT/OAuth)
+* Add observability (OpenTelemetry + Langfuse)
+* Deploy via Docker + Kubernetes
+
+
+
+
+
+
 
 
 
